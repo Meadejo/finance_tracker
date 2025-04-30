@@ -1,0 +1,10 @@
+{% extends "__layout.html" %}
+
+{% block title %} Home {% endblock title %}
+
+{% block content %}
+
+    <h3>Hi, {{ current_user.display_name() }}</h3>
+    This will be the Admin landing page.
+
+{% endblock content%}

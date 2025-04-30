@@ -1,0 +1,12 @@
+{% extends "__layout.html" %}
+
+{% block title %} Home {% endblock title %}
+
+{% block content %}
+<div class="container">
+    <h3>Hi, {{ current_user.display_name() }}</h3>
+    You're Home!! &#60;3
+    <br><br>
+    (One day, this will show some like graphs and cool reports or something.)
+</div>
+{% endblock content%}
