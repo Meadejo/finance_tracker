@@ -1,20 +1,21 @@
-# finance_tracker
-This is my first stab at making a more personally useful interpretation of Microsoft Money.
+# Description
+This is my first stab at making a more personally useful (and arguably modernized?) interpretation of Microsoft Money.
 This is a work in progress, by a single amateur coder as a hobby project.
 From concept, this project was started on 3/16/2025.
 
-# Usage
+# Concept
  - Track all financial transactions made for a single household.
  - Track individual accounts, as well as the institutions where those accounts are held.
  - Track non-cash assets. (Real estate, gold?, etc??)
- - Track Payees and Payors.
+ - Track Payees.
  - Maintain and track spending categories.
+ - Tagging for simple filtering and reporting.
  - Basic reporting on all of the above.
- - Basic DBDiagram here: [https://dbdiagram.io/d/Finances-6788aadf6b7fa355c30cd88a](https://dbdiagram.io/d/Finances-6788aadf6b7fa355c30cd88a)
-
+ - Original basic DBDiagram here: [https://dbdiagram.io/d/Finances-6788aadf6b7fa355c30cd88a](https://dbdiagram.io/d/Finances-6788aadf6b7fa355c30cd88a)
+   - Of Note: I started to stray from this concept before I even completed the diagram (and thus did not finish the diagram), but I've left it here for reference. At least for now.
 
 # Tech
-- Coded in Python, with the following libraries:
+- Coded in Python (Barring the requisite HTML/Jinja), with the following libraries:
  - Flask
  - SQLAlchemy
  - Flask-SQLAlchemy
