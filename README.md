@@ -1,6 +1,6 @@
 # Description
 This is my first stab at making a more personally useful (and arguably modernized?) interpretation of Microsoft Money.
-This is a work in progress, by a single amateur coder as a hobby project.
+This is a work in progress, by a single person as a hobby project.
 From concept, this project was started on 3/16/2025.
 
 # Concept
