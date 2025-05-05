@@ -1,7 +1,11 @@
 # Description
 This is my first stab at making a more personally useful (and arguably modernized?) interpretation of Microsoft Money.
 This is a work in progress, by a single person as a hobby project.
+
 From concept, this project was started on 3/16/2025.
+
+Project roadmap is roughly mapped with Issue Milestones.
+
 
 # Concept
  - Track all financial transactions made for a single household.
@@ -13,6 +17,7 @@ From concept, this project was started on 3/16/2025.
  - Basic reporting on all of the above.
  - Original basic DBDiagram here: [https://dbdiagram.io/d/Finances-6788aadf6b7fa355c30cd88a](https://dbdiagram.io/d/Finances-6788aadf6b7fa355c30cd88a)
    - Of Note: I started to stray from this concept before I even completed the diagram (and thus did not finish the diagram), but I've left it here for reference. At least for now.
+
 
 # Tech
 - Coded in Python (Barring the requisite HTML/Jinja), with the following libraries:
