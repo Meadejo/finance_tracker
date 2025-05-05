@@ -21,12 +21,16 @@ Project roadmap is roughly mapped with Issue Milestones.
 
 # Tech
 - Coded in Python (Barring the requisite HTML/Jinja), with the following libraries:
- - Flask
- - SQLAlchemy
- - Flask-SQLAlchemy
- - Flask-WTF
- - Email-Validator
- - Flask-Migrate
- - Flask-Mail
- - Flask-Login
- - Flask-Moment
+  - Flask
+  - SQLAlchemy
+  - Flask-SQLAlchemy
+  - Flask-WTF
+  - Email-Validator
+  - Flask-Migrate
+  - Flask-Mail
+  - Flask-Login
+  - Flask-Moment
+
+# Licensing
+Honestly... I've not thought about it yet. 
+I'll make some decisions on this when I have a functioning Alpha build. (Milestone 08)
