@@ -1,0 +1,20 @@
+{% extends "__layout.html" %}
+{% import "-bootstrap_wtf.html" as wtf %}
+{% import "-bootstrap_table.html" as bst %}
+
+{% block title %} {{ title }} {% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3>New Item</h3>
+                {{ wtf.quick_form(form) }}
+            </div>
+            <div class="col">
+                <h3>Current Items</h3>
+                {{ bst.quick_table(table) }}
+            </div>
+        </div>
+    </div>        
+{% endblock content%}

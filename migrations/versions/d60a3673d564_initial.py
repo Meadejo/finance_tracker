@@ -1,8 +1,8 @@
 """Initial
 
-Revision ID: e0c0b45a654d
+Revision ID: d60a3673d564
 Revises: 
-Create Date: 2025-04-30 15:13:31.829746
+Create Date: 2025-05-08 15:57:52.828015
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'e0c0b45a654d'
+revision = 'd60a3673d564'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -23,7 +23,6 @@ def upgrade():
     sa.Column('type_id', sa.Integer(), nullable=False),
     sa.Column('tag_ids', sa.Integer(), nullable=True),
     sa.Column('institution_id', sa.Integer(), nullable=False),
-    sa.Column('active', sa.Boolean(), nullable=False),
     sa.Column('account_number', sa.Integer(), nullable=True),
     sa.Column('comment', sa.String(), nullable=True),
     sa.Column('abbreviation', sa.String(), nullable=True),
@@ -31,6 +30,7 @@ def upgrade():
     sa.Column('date_close', sa.DateTime(), nullable=True),
     sa.Column('balance_beginning', sa.Integer(), nullable=False),
     sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('active', sa.Boolean(), nullable=False),
     sa.Column('created_at', sa.DateTime(), nullable=False),
     sa.Column('updated_at', sa.DateTime(), nullable=False),
     sa.PrimaryKeyConstraint('id'),
@@ -39,6 +39,7 @@ def upgrade():
     op.create_table('category_types',
     sa.Column('name', sa.String(length=64), nullable=False),
     sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('active', sa.Boolean(), nullable=False),
     sa.Column('created_at', sa.DateTime(), nullable=False),
     sa.Column('updated_at', sa.DateTime(), nullable=False),
     sa.PrimaryKeyConstraint('id')
@@ -50,6 +51,7 @@ def upgrade():
     sa.Column('name', sa.String(length=64), nullable=False),
     sa.Column('tag_ids', sa.Integer(), nullable=True),
     sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('active', sa.Boolean(), nullable=False),
     sa.Column('created_at', sa.DateTime(), nullable=False),
     sa.Column('updated_at', sa.DateTime(), nullable=False),
     sa.PrimaryKeyConstraint('id'),
@@ -58,6 +60,7 @@ def upgrade():
     op.create_table('transaction_statuses',
     sa.Column('name', sa.String(length=64), nullable=False),
     sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('active', sa.Boolean(), nullable=False),
     sa.Column('created_at', sa.DateTime(), nullable=False),
     sa.Column('updated_at', sa.DateTime(), nullable=False),
     sa.PrimaryKeyConstraint('id')
@@ -68,6 +71,7 @@ def upgrade():
     op.create_table('transaction_types',
     sa.Column('name', sa.String(length=64), nullable=False),
     sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('active', sa.Boolean(), nullable=False),
     sa.Column('created_at', sa.DateTime(), nullable=False),
     sa.Column('updated_at', sa.DateTime(), nullable=False),
     sa.PrimaryKeyConstraint('id')
@@ -81,6 +85,7 @@ def upgrade():
     sa.Column('pass_hash', sa.String(length=256), nullable=True),
     sa.Column('last_seen', sa.DateTime(), nullable=True),
     sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('active', sa.Boolean(), nullable=False),
     sa.Column('created_at', sa.DateTime(), nullable=False),
     sa.Column('updated_at', sa.DateTime(), nullable=False),
     sa.PrimaryKeyConstraint('id')

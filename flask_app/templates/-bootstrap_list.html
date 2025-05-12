@@ -1,0 +1,27 @@
+{% macro quick_list(settings, list) %}
+    {% set colwide=settings.wide -%}
+    {% set colclass = "col-" + colwide + " p-3 mb-2" -%}
+<div class="{{ colclass }}">
+<div class="list-group""
+    {%- if settings.id %} id="{{ settings.id }}"{% endif -%}>
+    
+    {%- for item in list %}
+        {% set class = "list-group-item list-group-item-action" -%}
+
+        {%- if item.color %}
+            {% set class = class + " list-group-item-" + item.color -%}
+        {%- else %}
+            {% set class = class + " list-group-item-primary" -%}
+        {%- endif %}
+
+        {%- if item.disabled %}
+            {% set class = class + " disabled" -%}
+        {%- endif %}
+
+        <a href="{{ item.link }}" 
+        class="{{ class }}">
+        {{ item.label }}</a>
+    {%- endfor %}  
+</div>
+</div>
+{% endmacro %}

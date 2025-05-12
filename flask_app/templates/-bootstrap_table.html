@@ -1,0 +1,31 @@
+{% macro quick_table(table) %}
+<table
+    {%- if table.id %} id="{{ table.id }}" {% set t_name=table.id -%}{% else %} id="table"{% set t_name="table" -%}
+    {% endif -%}
+>
+    <thead>
+        <tr>
+            {%- for col in table.columns %}
+            <th>{{ col }}</th>
+            {%- endfor %}
+        </tr>
+    </thead>
+</table>
+
+
+<script>
+    const $table = $('#{{ t_name }}')
+
+    $table.DataTable({
+        ajax : {
+            url: '/api/account',
+            dataSrc: 'items'
+        },
+        columns: [
+            { data: 'name' },
+            { data: 'type_id' },
+            { data: 'institution_id' }
+        ]
+    });
+</script>
+{% endmacro %}

@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.24.1/dist/bootstrap-table.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.24.1/dist/bootstrap-table.min.js"></script>
+
+<table 
+    id='table'
+    data-single-select="true"
+    data-click-to-select="true"
+    data-buttons="buttons"
+>
+    <thead>
+        <tr>
+            <th
+            data-field="state"
+            data-checkbox="true"
+            ></th>
+        </tr>
+    </thead>
+</table>
+
+<script>
+    var my_columns = [];
+    dataSet = JSON.parse('{{ table_data | tojson }}')
+    $.each( dataSet[0], function( key, value) {
+        var my_item = {};
+        my_item.field = key;
+        my_item.title = key;
+        my_columns.push(my_item);
+    });
+
+    $('#table').bootstrapTable({
+        columns: my_columns,
+        data: dataSet
+    })
+</script>

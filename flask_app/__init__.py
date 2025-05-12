@@ -46,6 +46,8 @@ def create_app(config_class=Config):
     app.register_blueprint(errors_bp)
     from flask_app.admin import bp as admin_bp
     app.register_blueprint(admin_bp)
+    from flask_app.api import bp as api_bp
+    app.register_blueprint(api_bp, url_prefix='/api')
 
     # If we're not running in Debug mode, enable logging.
     if not app.debug:

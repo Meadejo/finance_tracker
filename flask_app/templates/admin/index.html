@@ -1,10 +1,12 @@
 {% extends "__layout.html" %}
+{% import '-bootstrap_list.html' as list %}
 
-{% block title %} Home {% endblock title %}
+{% block title %} {{ title }} {% endblock title %}
 
 {% block content %}
 
     <h3>Hi, {{ current_user.display_name() }}</h3>
-    This will be the Admin landing page.
+    Admin landing page.
+        {{ list.quick_list(list_items, list_items.items) }}
 
 {% endblock content%}

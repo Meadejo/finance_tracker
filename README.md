@@ -25,4 +25,6 @@ From concept, this project was started on 3/16/2025.
  - Flask-Mail
  - Flask-Login
  - Flask-Moment
+ - Flask-HTTPAuth
+ - HTTPie
  - Look into Poetry for package management??
